@@ -19,7 +19,7 @@ const ProductCategories = () => {
     return (
         <>
             <Sidebar/>
-            <h1>Categories</h1>
+            <h1>Inventory Categories</h1>
             <div className="container">
             <div className="categories">
                 <div className="category">

@@ -35,3 +35,26 @@ h1{
     height:200px;
     border-radius: 10px;
 }
+
+.inventoryList {
+    display: flex;
+    margin: auto;
+}
+
+
+table {
+    border: 1px solid black;
+    align-items: center;
+    padding: 15px 15px ;
+    width: 100%;
+}
+
+th,td,tr {
+    border-collapse: collapse;
+}
+
+.add {
+    margin: 10px;
+    width:120px;
+    font-size: 20px;
+}
