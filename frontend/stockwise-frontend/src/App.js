@@ -4,6 +4,8 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Home from "./pages/home/Home";
 import logo from './assets/logo.svg';
+import Products from "./pages/products/Products";
+import ProductCategories from "./pages/products/ProductCategories";
 
 function App() {
     return (
@@ -13,6 +15,8 @@ function App() {
                 <Route exact path = "/" element={<Home/>}/>
                 <Route exact path = "/login" element={<Login/>}/>
                 <Route exact path = "/register" element={<Register/>}/>
+                <Route exact path = "/categories" element={<ProductCategories/>}/>
+                <Route exact path = "/products" element={<Products/>}/>
             </Routes>
         </Router>
     )
