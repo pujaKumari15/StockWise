@@ -10,10 +10,17 @@ import frozen from "../../assets/product_categories/frozen.svg"
 import condiments from "../../assets/product_categories/condiments.svg"
 import snacks from "../../assets/product_categories/snacks.svg"
 import staples from "../../assets/product_categories/staples.svg"
+import cleaning from "../../assets/product_categories/cleaning.svg"
+import hygiene from "../../assets/product_categories/hygiene.svg"
+import cookingEssentials from "../../assets/product_categories/cookingEssentials.svg"
+import Sidebar from "../../components/sidebar/Sidebar";
 
 const ProductCategories = () => {
     return (
         <>
+            <Sidebar/>
+            <h1>Categories</h1>
+            <div className="container">
             <div className="categories">
                 <div className="category">
                     <img src={dairy}  alt="logo"/>
@@ -49,10 +56,23 @@ const ProductCategories = () => {
                 <div className="category">
                     <img src={condiments}  alt="logo"/>
                 </div>
+                <div className="category">
+                    <img src={cleaning}  alt="logo"/>
+                </div>
+                <div className="category">
+                    <img src={hygiene}  alt="logo"/>
+                </div>
+            </div>
+            <div className="categories">
+                <div className="category">
+                    <img src={cookingEssentials}  alt="logo"/>
+                </div>
+            </div>
             </div>
         </>
     )
 
 }
+
 
 export default ProductCategories;
