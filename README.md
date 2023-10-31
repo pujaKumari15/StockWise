@@ -1,2 +1,2 @@
-# StoreWise
+# StockWise
 ESP Project-Tech Rebooters
