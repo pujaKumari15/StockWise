@@ -20,28 +20,30 @@ function VendorList() {
   }, []);
 
   return (
-      <div>
-        <h1>Vendor List</h1>
-        <table>
-
-            <tr>
-              <th>Vendor Name</th>
-              <th>Company Name</th>
-              <th>Email</th>
-              <th>Work Phone</th>
+    <div>
+      <h1>Vendor List</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Vendor Name</th>
+            <th>Company Name</th>
+            <th>Email</th>
+            <th>Work Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          {vendors.map(vendor => (
+            <tr key={vendor.id}>
+              <td>{vendor.vendorName}</td>
+              <td>{vendor.companyName}</td>
+              <td>{vendor.email}</td>
+              <td>{vendor.mobileNumber}</td>
             </tr>
-            {vendors.map(vendor => (
-              <tr key={vendor.id}>
-                <td>{vendor.vendorName}</td>
-                <td>{vendor.companyName}</td>
-                <td>{vendor.email}</td>
-                <td>{vendor.mobileNumber}</td>
-              </tr>
-            ))}
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
-        </table>
-      </div>
-    );
-  }
-
-  export default VendorList;
+export default VendorList;
