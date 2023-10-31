@@ -1,3 +1,4 @@
+import React from "react";
 import './App.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from "./pages/login/Login";
@@ -6,6 +7,7 @@ import Home from "./pages/home/Home";
 import logo from './assets/logo.svg';
 import Products from "./pages/products/Products";
 import ProductCategories from "./pages/products/ProductCategories";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 function App() {
     return (
@@ -17,6 +19,7 @@ function App() {
                 <Route exact path = "/register" element={<Register/>}/>
                 <Route exact path = "/categories" element={<ProductCategories/>}/>
                 <Route exact path = "/products" element={<Products/>}/>
+                <Route exact path = "/dashboard" element={<Dashboard/>}/>
             </Routes>
         </Router>
     )

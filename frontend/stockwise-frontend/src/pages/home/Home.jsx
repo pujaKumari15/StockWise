@@ -12,6 +12,9 @@ const Home = () => {
                 <Link to="/register" className="option-link">
                     <div className="option">Register (New User)</div>
                 </Link>
+                <Link to="/dashboard" className="option-link">
+                    <div className="option">Dashboard</div>
+                </Link>
             </div>
         </div>
     );
