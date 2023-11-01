@@ -8,6 +8,9 @@ import logo from './assets/logo.svg';
 import Products from "./pages/products/Products";
 import ProductCategories from "./pages/products/ProductCategories";
 import Dashboard from "./pages/dashboard/Dashboard";
+import Vendor from "./pages/vendor/vendor";
+
+
 
 function App() {
     return (
@@ -20,6 +23,7 @@ function App() {
                 <Route exact path = "/categories" element={<ProductCategories/>}/>
                 <Route exact path = "/products" element={<Products/>}/>
                 <Route exact path = "/dashboard" element={<Dashboard/>}/>
+                <Route exact path = "/vendor" element={<Vendor/>}/>
             </Routes>
         </Router>
     )
