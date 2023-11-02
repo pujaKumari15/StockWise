@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Sidebar from "../../components/sidebar/Sidebar";
+import './Vendors.css';
 
-function Vendor() {
-  const [vendors, setVendors] = useState([]);
-//  {"id": 123, "name": "test", "email": "xyz@gmail.com", "mobileNumber": "65000000000", "companyName": "SJSU"}
+function Vendors() {
+  const [vendors, setVendors] = useState([
+  {"id": 123, "vendorName": "Vendor Test Name 1", "email": "xyz@gmail.com", "mobileNumber": "65000000000", "companyName": "SJSU"},
+  {"id": 123, "vendorName": "Vendor Test Name 2", "email": "xyz@gmail.com", "mobileNumber": "65000000000", "companyName": "SJSU"}]);
+
   useEffect(() => {
     axios.get('/vendors')
       .then(response => {
@@ -22,16 +25,20 @@ function Vendor() {
   }, []);
 
   return (
-    <div>
+  <>
     <Sidebar/>
       <h1>Vendor List</h1>
-      <table>
+      <div className="vendorList">
+      <table className="vendorTable">
+      <thead>
         <tr>
           <th>Vendor Name</th>
           <th>Company Name</th>
           <th>Email</th>
           <th>Work Phone</th>
         </tr>
+        </thead>
+        <tbody>
         {vendors.map(vendor => (
           <tr key={vendor.id}>
             <td>{vendor.vendorName}</td>
@@ -40,9 +47,11 @@ function Vendor() {
             <td>{vendor.mobileNumber}</td>
           </tr>
         ))}
+        </tbody>
       </table>
-    </div>
+      </div>
+    </>
   );
 }
 
-export default Vendor;
+export default Vendors;
