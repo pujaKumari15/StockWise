@@ -8,7 +8,7 @@ import logo from './assets/logo.svg';
 import Products from "./pages/products/Products";
 import ProductCategories from "./pages/products/ProductCategories";
 import Dashboard from "./pages/dashboard/Dashboard";
-import Vendor from "./pages/vendor/Vendor";
+import Vendors from "./pages/vendors/Vendors";
 import PurchaseOrders from "./pages/purchaseorders/Purchaseorders";
 
 
