@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Sidebar from "../../components/sidebar/Sidebar";
 
 function Vendor() {
   const [vendors, setVendors] = useState([]);
-
+//  {"id": 123, "name": "test", "email": "xyz@gmail.com", "mobileNumber": "65000000000", "companyName": "SJSU"}
   useEffect(() => {
     axios.get('/vendors')
       .then(response => {
@@ -22,6 +23,7 @@ function Vendor() {
 
   return (
     <div>
+    <Sidebar/>
       <h1>Vendor List</h1>
       <table>
         <tr>

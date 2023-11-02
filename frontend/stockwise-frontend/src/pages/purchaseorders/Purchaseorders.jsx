@@ -24,7 +24,6 @@ function PurchaseOrders() {
     <div>
       <h1>Purchase Orders</h1>
       <table>
-
           <tr>
             <th>Vendor Name</th>
             <th>Vendor Phone Number</th>

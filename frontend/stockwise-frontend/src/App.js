@@ -24,7 +24,7 @@ function App() {
                 <Route exact path = "/categories" element={<ProductCategories/>}/>
                 <Route exact path = "/products" element={<Products/>}/>
                 <Route exact path = "/dashboard" element={<Dashboard/>}/>
-                <Route exact path = "/vendor" element={<Vendor/>}/>
+                <Route exact path = "/vendors" element={<Vendors/>}/>
                 <Route exact path = "/purchaseorders" element={<PurchaseOrders/>}/>
             </Routes>
         </Router>
