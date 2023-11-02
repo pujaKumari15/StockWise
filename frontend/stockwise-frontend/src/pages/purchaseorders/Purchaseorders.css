@@ -1,0 +1,21 @@
+.orderList {
+    display: flex;
+    margin: auto;
+}
+
+.orderTable {
+    border: 0px solid blue;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.orderTable thead th {
+    border: 1px black;
+    border-style: solid none;
+    padding: 20px 40px;
+}
+
+.orderTable tbody tr td {
+    padding: 5px;
+}
