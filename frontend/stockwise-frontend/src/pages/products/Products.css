@@ -1,10 +1,14 @@
+*{
+
+}
+
 h1{
     text-align: center;
     font-size: 50px;
     font-family: "Comic Sans MS";
 }
 .container {
-    margin-left: 300px;
+    margin-left: 350px;
     width: 1050px;
     overflow-y: auto;
     border: 2px solid bisque;
@@ -39,22 +43,88 @@ h1{
 .inventoryList {
     display: flex;
     margin: auto;
+    height: 100vh;
+    overflow-y: auto;
+
 }
 
 
 table {
     border: 1px solid black;
     align-items: center;
-    padding: 15px 15px ;
+    border-collapse: collapse;
     width: 100%;
 }
 
-th,td,tr {
-    border-collapse: collapse;
+thead{
+    font-size: 25px;
 }
 
-.add {
-    margin: 10px;
-    width:120px;
-    font-size: 20px;
+th,td,tr {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.edit{
+    width:30%;
+    text-align: center;
+}
+
+.add{
+    width:10%;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: black;
+    font-size: 25px;
+}
+
+.modal-content p {
+    color: black;
+}
+
+.modal-content input[type=text], input[type=number], input[type=date] {
+    width: 50%;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.modal-content select {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+.modal-content label {
+    color: black;
+}
+.modal-content button {
+    width: 50%;
+    font-size: 15px;
 }

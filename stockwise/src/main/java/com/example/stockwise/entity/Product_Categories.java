@@ -13,7 +13,7 @@ public enum Product_Categories {
     CONDIMENTS,
     CLEANING_AND_HOUSEHOLD,
     PERSONAL_HYGIENE,
-    COOKING_ESSENTIALS
+    COOKING_ESSENTIAL
 
 
 }

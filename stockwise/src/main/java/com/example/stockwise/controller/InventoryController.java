@@ -1,32 +1,38 @@
 package com.example.stockwise.controller;
 
+import com.example.stockwise.dto.ProductDTO;
+import com.example.stockwise.service.ProductService;
+import jakarta.websocket.server.PathParam;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/inventory")
 public class InventoryController {
 
-//    @GetMapping(value = "/products")
-//    public ResponseEntity<?> getProducts() {
-//
-//    }
-//
-//    @PostMapping(value = "/addProductToInventory")
-//    public ResponseEntity<?> addProductToInventory() {
-//
-//    }
-//
-//    @PostMapping(value = "/deleteProductFromInventory")
-//    public ResponseEntity<?> deleteProductFromInventory() {
-//
-//    }
-//
-//    @PostMapping(value = "/updateProductQuantityInInventory")
-//    public ResponseEntity<?> updateProductQuantityInInventory() {
-//
-//    }
+    @Autowired
+    private ProductService productService;
+
+    @GetMapping(value = "{storeId}/products")
+    public List<ProductDTO> getProducts(@PathVariable("storeId")String storeId) {
+        return productService.getInventoryForStore(storeId);
+
+    }
+
+    @PostMapping(value = "{storeId}/addProductToInventory")
+    public ResponseEntity<?> addProductToInventory(@PathVariable("storeId")String storeId,
+                                                   @RequestBody ProductDTO productDTO) {
+        return productService.addToInventory(storeId,productDTO);
+
+    }
+
+    @PostMapping(value = "{storeId}/updateProductQuantityInInventory")
+    public ResponseEntity<?> updateProductQuantityInInventory(@PathVariable("storeId")String storeId,
+                                                              @RequestBody ProductDTO productDTO) {
+         return productService.updateProductQuantity(storeId,productDTO);
+    }
 }

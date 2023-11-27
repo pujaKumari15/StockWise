@@ -5,11 +5,11 @@ import jakarta.persistence.*;
 import java.sql.Date;
 
 @Entity
-@Table(name = "product")
+@Table(name = "products")
 public class Product {
 
     @Id
-    @Column(name="product_id")
+    @Column(name="id")
     private String productId;
 
     @Column(name="product_name")
@@ -21,27 +21,26 @@ public class Product {
     @Column(name="quantity")
     private int quantity;
 
-    @Enumerated
-    @Column(name="category")
-    private Product_Categories categories;
+    @Column(name = "category_id")
+    private int categoryId;
 
     @Column(name="store_id")
     private String storeId;
 
-    @Column(name="expiry_date")
-    private Date expiry_date;
+    @Column(name="date_of_expiry")
+    private Date expiryDate;
 
     public Product() {
     }
 
-    public Product(String productId, String productName, String brand, int quantity, Product_Categories categories, String storeId, Date expiry_date) {
+    public Product(String productId, String productName, String brand, int quantity, int categoryId, String storeId, Date expiryDate) {
         this.productId = productId;
         this.productName = productName;
         this.brand = brand;
         this.quantity = quantity;
-        this.categories = categories;
+        this.categoryId = categoryId;
         this.storeId = storeId;
-        this.expiry_date = expiry_date;
+        this.expiryDate = expiryDate;
     }
 
     public String getProductId() {
@@ -76,13 +75,6 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public Product_Categories getCategories() {
-        return categories;
-    }
-
-    public void setCategories(Product_Categories categories) {
-        this.categories = categories;
-    }
 
     public String getStoreId() {
         return storeId;
@@ -92,11 +84,19 @@ public class Product {
         this.storeId = storeId;
     }
 
-    public Date getExpiry_date() {
-        return expiry_date;
+    public int getCategoryId() {
+        return categoryId;
     }
 
-    public void setExpiry_date(Date expiry_date) {
-        this.expiry_date = expiry_date;
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public Date getExpiryDate() {
+        return expiryDate;
+    }
+
+    public void setExpiryDate(Date expiryDate) {
+        this.expiryDate = expiryDate;
     }
 }

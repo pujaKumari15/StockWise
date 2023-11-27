@@ -7,6 +7,7 @@ import java.sql.Date;
 
 public class ProductDTO {
 
+    private String id;
     private String name;
     private String brand;
 
@@ -19,12 +20,21 @@ public class ProductDTO {
     public ProductDTO() {
     }
 
-    public ProductDTO(String name, String brand, Product_Categories category, int quantity, Date expiryDate) {
+    public ProductDTO(String id, String name, String brand, Product_Categories category, int quantity, Date expiryDate) {
+        this.id = id;
         this.name = name;
         this.brand = brand;
         this.category = category;
         this.quantity = quantity;
         this.expiryDate = expiryDate;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
