@@ -6,5 +6,5 @@ import java.util.List;
 public interface VendorService {
     List<VendorDTO> getAllVendors();
 
-    VendorDTO getVendorForId(String vendorId);
+    VendorDTO getVendorForId(int vendorId);
 }

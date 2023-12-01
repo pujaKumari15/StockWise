@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Sidebar from "../../components/sidebar/Sidebar";
 import './Purchaseorders.css';
+import Sidebar from "../dashboard/SideBar";
 
 function PurchaseOrders() {
   const [purchaseOrders, setPurchaseOrders] = useState([
   { "id": 123, "mobileNumber": 12345678, "vendorName": "Test Vendor Name 1", "lastPurchaseDate": '2023-10-28'}]);
+    const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
+    const OpenSidebar = () => {
+        setOpenSidebarToggle(!openSidebarToggle)
+    }
 
   useEffect(() => {
     axios.get('/purchase_orders')
@@ -25,7 +29,8 @@ function PurchaseOrders() {
 
   return (
   <>
-      <Sidebar/>
+      <div className='grid-container'>
+      <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
       <h1>Purchase Orders</h1>
       <div className="orderList">
       <table className="orderTable">
@@ -46,6 +51,7 @@ function PurchaseOrders() {
         ))}
         </tbody>
       </table>
+      </div>
       </div>
     </>
   );

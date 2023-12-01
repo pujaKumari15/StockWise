@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import './Products.css';
 import { FaEdit } from "react-icons/fa";
-import Sidebar from "../../components/sidebar/Sidebar";
 import axios from "axios";
+import Sidebar from "../dashboard/SideBar";
 
 const Product = () => {
     const[inventory, setInventory] = useState([]);
@@ -11,8 +11,13 @@ const Product = () => {
     const[productId, setProductId] = useState("");
     const[quantity, setQuantity] = useState(0);
     const[modal, setModal] = useState(false);
+    const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
     const closeModal = () => {
         setModal(!modal);
+    }
+
+    const OpenSidebar = () => {
+        setOpenSidebarToggle(!openSidebarToggle)
     }
     useEffect(() => {
         axios.get("http://localhost:8080/inventory/1/products")
@@ -45,8 +50,9 @@ const Product = () => {
 
     return (
         <>
-            <Sidebar/>
-            <h1>Inventory</h1>
+            <div className='grid-container'>
+            <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+            <h1>Products</h1>
             <div className="inventoryList">
             <table>
                 <thead>
@@ -98,6 +104,7 @@ const Product = () => {
                     </div>
                 )}
             </table>
+            </div>
             </div>
         </>
     )
