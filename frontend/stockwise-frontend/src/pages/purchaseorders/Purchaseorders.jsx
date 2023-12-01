@@ -29,6 +29,7 @@ function PurchaseOrders() {
 
   return (
   <>
+      <div className='grid-container'>
       <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
       <h1>Purchase Orders</h1>
       <div className="orderList">
@@ -50,6 +51,7 @@ function PurchaseOrders() {
         ))}
         </tbody>
       </table>
+      </div>
       </div>
     </>
   );

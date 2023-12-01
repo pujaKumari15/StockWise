@@ -30,6 +30,7 @@ function Vendors() {
 
   return (
   <>
+    <div className='grid-container'>
     <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
     <h1>Vendor List</h1>
       <div className="vendorList">
@@ -54,6 +55,7 @@ function Vendors() {
         </tbody>
       </table>
       </div>
+    </div>
     </>
   );
 }

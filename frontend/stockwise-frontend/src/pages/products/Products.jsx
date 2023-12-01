@@ -50,8 +50,9 @@ const Product = () => {
 
     return (
         <>
+            <div className='grid-container'>
             <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
-            <h1>Inventory</h1>
+            <h1>Products</h1>
             <div className="inventoryList">
             <table>
                 <thead>
@@ -103,6 +104,7 @@ const Product = () => {
                     </div>
                 )}
             </table>
+            </div>
             </div>
         </>
     )

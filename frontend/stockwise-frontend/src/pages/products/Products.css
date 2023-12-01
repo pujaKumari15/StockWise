@@ -2,15 +2,26 @@
 
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main';
+    height: 100vh;
+}
+
 h1{
+    grid-area: header;
     text-align: center;
     font-size: 50px;
     font-family: "Comic Sans MS";
 }
 .container {
+    margin-left: 150px;
+    width: 1050px;
     grid-area: main;
-    /*margin-left: 350px;*/
-    /*width: 1050px;*/
     overflow-y: auto;
     border: 2px solid bisque;
     box-shadow: 0 4px 8px 0 bisque;
@@ -42,8 +53,7 @@ h1{
 }
 
 .inventoryList {
-    display: flex;
-    margin: auto;
+    grid-area: main;
     height: 100vh;
     overflow-y: auto;
 

@@ -52,6 +52,7 @@ const ProductCategories = () => {
     }
     return (
         <>
+            <div className='grid-container'>
             <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
             <h1>Inventory Categories</h1>
             <div className="container">
@@ -171,6 +172,7 @@ const ProductCategories = () => {
                         </div>
                     </div>
                 )}
+            </div>
             </div>
         </>
     )
