@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
-@RequestMapping("/vendor")
+@RequestMapping("/vendors")
 public class VendorController {
 
     @Autowired
@@ -22,7 +22,7 @@ public class VendorController {
         return vendorService.getAllVendors();
     }
     @GetMapping(value = "{vendorId}")
-    public VendorDTO getVendorForId(@PathVariable("vendorId")String vendorId) {
+    public VendorDTO getVendorForId(@PathVariable("vendorId")int vendorId) {
         return vendorService.getVendorForId(vendorId);
 
     }
