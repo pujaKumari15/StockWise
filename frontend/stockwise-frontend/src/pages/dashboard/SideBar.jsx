@@ -5,57 +5,60 @@ import
     from 'react-icons/bs'
 import {BiSolidHome, BiSolidShoppingBag} from "react-icons/bi";
 import {AiFillAlert} from "react-icons/ai";
+import Products from "../products/Products";
+import ProductCategories from "../products/ProductCategories";
+import {Link} from "react-router-dom";
 
 function Sidebar({openSidebarToggle, OpenSidebar}) {
     return (
         <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
-         {/*  <div className='sidebar-title'>
-                <div className='sidebar-brand'>
-                    <BiSolidHome  className='icon_header'/> Home
-                </div>
-                <span className='icon close_icon' onClick={OpenSidebar}>X</span>
-    </div> */}
+            {/*<div className='sidebar-title'>*/}
+            {/*    <div className='sidebar-brand'>*/}
+            {/*        <BiSolidHome  className='icon_header'/> Home*/}
+            {/*    </div>*/}
+            {/*    <span className='icon close_icon' onClick={OpenSidebar}>X</span>*/}
+            {/*</div>*/}
 
             <ul className='sidebar-list'>
                 <li className='sidebar-list-item'>
-                    <a href="">
+                    <Link to="/dashboard">
                         <BsGrid1X2Fill className='icon'/> Dashboard
-                    </a>
+                    </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="">
+                    <Link to='/categories'>
                         <BsFillGrid3X3GapFill className='icon'/> Categories
-                    </a>
+                    </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="">
+                    <Link to="/products">
                         <BsFillArchiveFill className='icon'/> Products
-                    </a>
+                    </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="">
+                    <Link to="/dashboard">
                         <BsCart3 className='icon'/> Sales
-                    </a>
+                    </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="">
+                    <Link to="/purchaseorders">
                         <BiSolidShoppingBag className='icon'/> Purchases
-                    </a>
+                    </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="">
+                    <Link to="/vendors">
                         <BsPeopleFill className='icon'/> Vendors
-                    </a>
+                    </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="">
+                    <Link to="/dashboard">
                         <BsMenuButtonWideFill className='icon'/> Reports
-                    </a>
+                    </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <a href="">
+                    <Link to="/dashboard">
                         <BsFillBellFill className='icon'/> Alerts
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </aside>

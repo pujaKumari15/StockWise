@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Sidebar from "../../components/sidebar/Sidebar";
 import './Vendors.css';
+import Sidebar from "../dashboard/SideBar";
 
 function Vendors() {
   const [vendors, setVendors] = useState([
   {"id": 123, "vendorName": "Vendor Test Name 1", "email": "xyz@gmail.com", "mobileNumber": "65000000000", "companyName": "SJSU"},
   {"id": 123, "vendorName": "Vendor Test Name 2", "email": "xyz@gmail.com", "mobileNumber": "65000000000", "companyName": "SJSU"}]);
 
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle)
+  }
   useEffect(() => {
     axios.get('/vendors')
       .then(response => {
@@ -26,8 +30,8 @@ function Vendors() {
 
   return (
   <>
-    <Sidebar/>
-      <h1>Vendor List</h1>
+    <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+    <h1>Vendor List</h1>
       <div className="vendorList">
       <table className="vendorTable">
       <thead>

@@ -8,8 +8,9 @@ h1{
     font-family: "Comic Sans MS";
 }
 .container {
-    margin-left: 350px;
-    width: 1050px;
+    grid-area: main;
+    /*margin-left: 350px;*/
+    /*width: 1050px;*/
     overflow-y: auto;
     border: 2px solid bisque;
     box-shadow: 0 4px 8px 0 bisque;

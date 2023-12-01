@@ -13,8 +13,8 @@ import staples from "../../assets/product_categories/staples.svg"
 import cleaning from "../../assets/product_categories/cleaning.svg"
 import hygiene from "../../assets/product_categories/hygiene.svg"
 import cookingEssentials from "../../assets/product_categories/cookingEssentials.svg"
-import Sidebar from "../../components/sidebar/Sidebar";
 import axios from "axios";
+import Sidebar from "../dashboard/SideBar";
 
 const ProductCategories = () => {
     const[category, setCategory] = useState("");
@@ -23,6 +23,10 @@ const ProductCategories = () => {
     const[quantity, setQuantity] = useState(0);
     const [doe, setDoe] = useState([]);
     const[modal, setModal] = useState(false);
+    const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
+    const OpenSidebar = () => {
+        setOpenSidebarToggle(!openSidebarToggle)
+    }
     const closeModal = () => {
         setModal(!modal);
     }
@@ -48,7 +52,7 @@ const ProductCategories = () => {
     }
     return (
         <>
-            <Sidebar/>
+            <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
             <h1>Inventory Categories</h1>
             <div className="container">
             <div className="categories">
