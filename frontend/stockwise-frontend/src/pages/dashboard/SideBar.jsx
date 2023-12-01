@@ -7,6 +7,7 @@ import {BiSolidHome, BiSolidShoppingBag} from "react-icons/bi";
 import {AiFillAlert} from "react-icons/ai";
 import Products from "../products/Products";
 import ProductCategories from "../products/ProductCategories";
+import Report from "../reports/Reports"
 import {Link} from "react-router-dom";
 
 function Sidebar({openSidebarToggle, OpenSidebar}) {
@@ -51,7 +52,7 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                     </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <Link to="/dashboard">
+                    <Link to="/reports">
                         <BsMenuButtonWideFill className='icon'/> Reports
                     </Link>
                 </li>

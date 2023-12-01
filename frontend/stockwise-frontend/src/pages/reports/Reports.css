@@ -1,0 +1,38 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main';
+    height: 100vh;
+}
+
+.reports {
+    grid-area: main;
+    align-items: left;
+ 
+}
+
+.reportsTable {
+    border: 0px solid blue;
+    align-items: left;
+    padding: 20px;
+    width: 100%;
+}
+
+.reportsTable thead th {
+    border: 1px black;
+    border-style: solid none;
+    padding: 20px 40px;
+}
+
+.reportsTable tbody tr td {
+    padding: 5px;
+}
+
+.h2title{
+
+    font-size:medium;
+    font-family: 'Times New Roman', Times, serif;
+}
