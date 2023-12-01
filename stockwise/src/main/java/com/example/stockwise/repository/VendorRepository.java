@@ -12,9 +12,9 @@ import java.util.List;
 @EnableJpaRepositories
 public interface VendorRepository extends JpaRepository<Vendor,String> {
 
-    @Query("SELECT v FROM Vendors v WHERE 1=1")
+    @Query("SELECT v FROM Vendor v WHERE 1=1")
     List<Vendor> getAllVendors();
 
-    @Query("SELECT v FROM Vendors v WHERE v.vendorId = ?1")
+    @Query("SELECT v FROM Vendor v WHERE v.vendorId = ?1")
     Vendor findByVendorId(String vendorId);
 }
