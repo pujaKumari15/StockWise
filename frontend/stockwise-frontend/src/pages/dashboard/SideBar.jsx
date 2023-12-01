@@ -9,12 +9,12 @@ import {AiFillAlert} from "react-icons/ai";
 function Sidebar({openSidebarToggle, OpenSidebar}) {
     return (
         <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
-            <div className='sidebar-title'>
+         {/*  <div className='sidebar-title'>
                 <div className='sidebar-brand'>
                     <BiSolidHome  className='icon_header'/> Home
                 </div>
                 <span className='icon close_icon' onClick={OpenSidebar}>X</span>
-            </div>
+    </div> */}
 
             <ul className='sidebar-list'>
                 <li className='sidebar-list-item'>
@@ -24,17 +24,12 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                 </li>
                 <li className='sidebar-list-item'>
                     <a href="">
-                        <BsFillArchiveFill className='icon'/> Products
-                    </a>
-                </li>
-                <li className='sidebar-list-item'>
-                    <a href="">
                         <BsFillGrid3X3GapFill className='icon'/> Categories
                     </a>
                 </li>
                 <li className='sidebar-list-item'>
                     <a href="">
-                        <BsListCheck className='icon'/> Inventory
+                        <BsFillArchiveFill className='icon'/> Products
                     </a>
                 </li>
                 <li className='sidebar-list-item'>
