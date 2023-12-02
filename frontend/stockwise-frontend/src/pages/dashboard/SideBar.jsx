@@ -1,13 +1,9 @@
 import React from 'react'
 import
 {BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill,
-    BsListCheck, BsMenuButtonWideFill, BsFillBellFill}
+    BsMenuButtonWideFill, BsFillBellFill}
     from 'react-icons/bs'
-import {BiSolidHome, BiSolidShoppingBag} from "react-icons/bi";
-import {AiFillAlert} from "react-icons/ai";
-import Products from "../products/Products";
-import ProductCategories from "../products/ProductCategories";
-import Report from "../reports/Reports"
+import {BiSolidShoppingBag} from "react-icons/bi";
 import {Link} from "react-router-dom";
 
 function Sidebar({openSidebarToggle, OpenSidebar}) {
@@ -57,7 +53,7 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                     </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <Link to="/dashboard">
+                    <Link to="/alerts">
                         <BsFillBellFill className='icon'/> Alerts
                     </Link>
                 </li>

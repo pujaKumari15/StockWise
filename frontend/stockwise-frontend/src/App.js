@@ -11,6 +11,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import Vendors from "./pages/vendors/Vendors";
 import PurchaseOrders from "./pages/purchaseorders/Purchaseorders";
 import Reports from "./pages/reports/Reports"
+import Alerts from "./pages/alerts/Alerts"
 
 
 
@@ -28,6 +29,7 @@ function App() {
                 <Route exact path = "/vendors" element={<Vendors/>}/>
                 <Route exact path = "/purchaseorders" element={<PurchaseOrders/>}/>
                 <Route exact path = "/reports" element={<Reports/>}/>
+                <Route exact path = "/alerts" element={<Alerts/>}/>
             </Routes>
         </Router>
     )
