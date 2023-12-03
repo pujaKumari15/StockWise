@@ -33,11 +33,6 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                     </Link>
                 </li>
                 <li className='sidebar-list-item'>
-                    <Link to="/dashboard">
-                        <BsCart3 className='icon'/> Sales
-                    </Link>
-                </li>
-                <li className='sidebar-list-item'>
                     <Link to="/purchaseorders">
                         <BiSolidShoppingBag className='icon'/> Purchases
                     </Link>
