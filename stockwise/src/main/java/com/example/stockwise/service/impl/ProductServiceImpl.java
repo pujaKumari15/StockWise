@@ -27,7 +27,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<ProductDTO> getInventoryForStore(String storeId) {
-
         return productRepository.findByStoreId(storeId).stream().map(product ->
                 new ProductDTO(product.getProductId(),product.getProductName(), product.getBrand(),
                         Product_Categories.valueOf(

@@ -5,7 +5,16 @@ import Sidebar from "../dashboard/SideBar";
 
 function PurchaseOrders() {
   const [purchaseOrders, setPurchaseOrders] = useState([
-  { "id": 123, "mobileNumber": 12345678, "vendorName": "Test Vendor Name 1", "lastPurchaseDate": '2023-10-28'}]);
+
+
+      {"id": 1, "mobileNumber": "(857) 555-0101", "vendorName": "Fresh Farms", "lastPurchaseDate": "2023-01-15", "companyName": "Fresh Farms", "categoryPurchased": "Chicken"},
+      {"id": 12, "mobileNumber": "(202) 555-0102", "vendorName": "Organic Origins", "lastPurchaseDate": "2023-02-20", "companyName": "Organic Origins", "categoryPurchased": "Flour, rice and cereals"},
+      {"id": 5, "mobileNumber": "(510) 555-0105", "vendorName": "Veggie Variety", "lastPurchaseDate": "2023-02-28", "companyName": "Veggie Variety", "categoryPurchased":"Dairy"},
+      {"id": 4, "mobileNumber": "(512) 555-0104", "vendorName": "Bakery Bliss", "lastPurchaseDate": "2023-01-05", "companyName": "Bakery Bliss", "categoryPurchased": "Snacks and Bakery"},
+      {"id": 5, "mobileNumber": "(202) 555-0105", "vendorName": "Veggie Variety", "lastPurchaseDate": "2023-02-28", "companyName": "Veggie Variety", "categoryPurchased": "Vegetables"},
+    {"id": 6, "mobileNumber": "(202) 555-0106", "vendorName": "Quality Meats", "lastPurchaseDate": "2023-03-15", "companyName": "Quality Meats", "categoryPurchased": "Meat"},
+    {"id": 7, "mobileNumber": "(202) 555-0107", "vendorName": "Seafood Source", "lastPurchaseDate": "2023-01-25", "companyName": "Seafood Source", "categoryPurchased": "Seafood"}
+  ]);
     const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
     const OpenSidebar = () => {
         setOpenSidebarToggle(!openSidebarToggle)
@@ -39,6 +48,7 @@ function PurchaseOrders() {
             <th>Vendor Name</th>
             <th>Vendor Phone Number</th>
             <th>Last Purchased Date</th>
+              <th>Category Purchased</th>
           </tr>
           </thead>
         <tbody>
@@ -47,6 +57,7 @@ function PurchaseOrders() {
             <td>{order.vendorName}</td>
             <td>{order.mobileNumber}</td>
             <td>{order.lastPurchaseDate}</td>
+              <td>{order.categoryPurchased}</td>
           </tr>
         ))}
         </tbody>

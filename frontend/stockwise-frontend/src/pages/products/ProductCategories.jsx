@@ -33,7 +33,7 @@ const ProductCategories = () => {
     async function addProduct(event) {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:8080/inventory/1/addProductToInventory", {
+            await axios.post("http://localhost:8081/inventory/1/addProductToInventory", {
                 "name" : productName,
                 "brand":brand,
                 "quantity": quantity,

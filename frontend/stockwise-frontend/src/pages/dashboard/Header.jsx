@@ -17,6 +17,8 @@ function Header({OpenSidebar}) {
                 <BsFillEnvelopeFill className='icon'/>
                 <BsPersonCircle className='icon'/>
             </div>
+            <button className="logout-button">Logout</button>
+
         </header>
     )
 }

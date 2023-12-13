@@ -1,20 +1,29 @@
 .App {
+  /* Your existing styles for .App */
 }
 
 .App-header {
-  min-height: 100px;
   display: flex;
-  flex-direction: column;
+  align-items: center; /* Vertically centers the contents of the header */
+  justify-content: start; /* Aligns items to the start */
+  padding: 10px 20px;
   background-color: bisque;
 }
 
-.logo {
-  margin-top: 15px;
-  margin-left: 10px;
-  height:40px;
+.App-logo {
+  height: 50px; /* Adjust height as necessary */
+  margin-right: 10px; /* Adjust side margins as necessary */
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.logout-button {
+  margin-left: auto; /* Pushes the button to the right */
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}

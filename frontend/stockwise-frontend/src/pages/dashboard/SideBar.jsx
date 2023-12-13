@@ -1,7 +1,9 @@
 import React from 'react'
 import
-{BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill,
-    BsMenuButtonWideFill, BsFillBellFill}
+{
+    BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill,
+    BsMenuButtonWideFill, BsFillBellFill, BsBoxArrowRight
+}
     from 'react-icons/bs'
 import {BiSolidShoppingBag} from "react-icons/bi";
 import {Link} from "react-router-dom";
@@ -52,6 +54,11 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                         <BsFillBellFill className='icon'/> Alerts
                     </Link>
                 </li>
+                {/*<li className='sidebar-list-item'>*/}
+                {/*    <Link to="/" onClick={onLogout}>*/}
+                {/*        <BsBoxArrowRight className='icon'/> Logout*/}
+                {/*    </Link>*/}
+                {/*</li>*/}
             </ul>
         </aside>
     )

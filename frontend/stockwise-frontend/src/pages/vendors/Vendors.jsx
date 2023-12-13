@@ -5,8 +5,15 @@ import Sidebar from "../dashboard/SideBar";
 
 function Vendors() {
   const [vendors, setVendors] = useState([
-  {"id": 123, "vendorName": "Vendor Test Name 1", "email": "xyz@gmail.com", "mobileNumber": "65000000000", "companyName": "SJSU"},
-  {"id": 123, "vendorName": "Vendor Test Name 2", "email": "xyz@gmail.com", "mobileNumber": "65000000000", "companyName": "SJSU"}]);
+    {"id": 1, "vendorName": "Fresh Farms", "email": "contact@freshfarms.com", "mobileNumber": "(202) 555-0101", "companyName": "Fresh Farms"},
+    {"id": 2, "vendorName": "Organic Origins", "email": "sales@organicorigins.net", "mobileNumber": "(202) 555-0102", "companyName": "Organic Origins"},
+    {"id": 3, "vendorName": "Daily Dairy", "email": "info@dailydairy.co", "mobileNumber": "(202) 555-0103", "companyName": "Daily Dairy"},
+    {"id": 4, "vendorName": "Bakery Bliss", "email": "orders@bakerybliss.org", "mobileNumber": "(202) 555-0104", "companyName": "Bakery Bliss"},
+    {"id": 5, "vendorName": "Veggie Variety", "email": "support@veggievariety.com", "mobileNumber": "(202) 555-0105", "companyName": "Veggie Variety"},
+    {"id": 6, "vendorName": "Quality Meats", "email": "hello@qualitymeats.net", "mobileNumber": "(202) 555-0106", "companyName": "Quality Meats"},
+    {"id": 7, "vendorName": "Seafood Source", "email": "inquiry@seafoodsource.co", "mobileNumber": "(202) 555-0107", "companyName": "Seafood Source"}
+
+  ]);
 
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
   const OpenSidebar = () => {

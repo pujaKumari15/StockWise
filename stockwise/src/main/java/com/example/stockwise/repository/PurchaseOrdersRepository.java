@@ -14,7 +14,7 @@ import java.util.List;
 @EnableJpaRepositories
 public interface PurchaseOrdersRepository extends JpaRepository<Vendor, Integer> {
 
-    @Query("SELECT s FROM stocks s WHERE 1=1")
+    @Query("SELECT po FROM PurchaseOrders po WHERE 1=1")
     List<PurchaseOrders> getAllPurchaseOrders();
 
 }

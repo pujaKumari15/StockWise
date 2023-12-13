@@ -5,6 +5,7 @@
     border: 1px solid #ccc;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 .input-container {
@@ -16,21 +17,24 @@ input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-left: 5%;  /* Added to center the input */
+    margin-right: 5%; /* Added to center the input */
 }
 
 button {
-    width: 100%;
+    width: 90%;
     padding: 10px;
-    background-color: #ffb700;
+    background-color: #ffb700; /* Button color is yellow */
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 0 5%;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #e0a600; /* Slightly darker yellow on hover for better effect */
 }
 
 .forgot-password {
@@ -43,3 +47,4 @@ button:hover {
 .forgot-password:hover {
     color: #0056b3;
 }
+

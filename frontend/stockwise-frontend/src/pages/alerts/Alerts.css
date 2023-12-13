@@ -10,13 +10,13 @@
 
 .reports {
     grid-area: main;
-    align-items: left;
- 
+    align-items: flex-start;
+
 }
 
 .reportsTable {
     border: 0px solid blue;
-    align-items: left;
+    align-items: flex-start;
     padding: 20px;
     width: 100%;
 }

@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Home.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
+import { useKeycloak } from "@react-keycloak/web";
+
 const Home = () => {
+    const navigate = useNavigate();
+    const { keycloak } = useKeycloak();
+
+    const handleLoginClick = () => {
+        if (!keycloak.authenticated) {
+            keycloak.login({ redirectUri: `${window.location.origin}/dashboard` });
+        } else {
+            navigate('/dashboard');
+        }
+    };
+
     return (
         <div className="home-container">
-            <h2>Welcome to Our Website!</h2>
+
             <div className="options-container">
-                <Link to="/login" className="option-link">
+                <div className="option-link" onClick={handleLoginClick}>
                     <div className="option">Login (Registered User?)</div>
-                </Link>
+                </div>
                 <Link to="/register" className="option-link">
-                    <div className="option">Register (New User)</div>
-                </Link>
-                <Link to="/dashboard" className="option-link">
-                    <div className="option">Dashboard</div>
+                    <div className="option">Register (New User?)</div>
                 </Link>
             </div>
         </div>

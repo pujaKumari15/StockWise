@@ -17,20 +17,19 @@ public class InventoryController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping(value = "{storeId}/products")
+    @GetMapping(value = "/{storeId}/products")
     public List<ProductDTO> getProducts(@PathVariable("storeId")String storeId) {
         return productService.getInventoryForStore(storeId);
-
     }
 
-    @PostMapping(value = "{storeId}/addProductToInventory")
+    @PostMapping(value = "/{storeId}/addProductToInventory")
     public ResponseEntity<?> addProductToInventory(@PathVariable("storeId")String storeId,
                                                    @RequestBody ProductDTO productDTO) {
         return productService.addToInventory(storeId,productDTO);
 
     }
 
-    @PostMapping(value = "{storeId}/updateProductQuantityInInventory")
+    @PostMapping(value = "/{storeId}/updateProductQuantityInInventory")
     public ResponseEntity<?> updateProductQuantityInInventory(@PathVariable("storeId")String storeId,
                                                               @RequestBody ProductDTO productDTO) {
          return productService.updateProductQuantity(storeId,productDTO);

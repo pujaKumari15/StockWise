@@ -1,18 +1,35 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 export const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+
+    const validateFields = () => {
+        const usernameRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.com$/;
+        if (!username || !password) {
+            setError('Both username and password are required');
+            return false;
+        }
+        if (!usernameRegex.test(username)) {
+            setError('Username must be in the format abc@abc.com');
+            return false;
+        }
+        setError('');
+        return true;
+    };
 
     const handleLogin = () => {
-        // Your login logic here (e.g., API call to authenticate user)
-        console.log('User:', username, 'Password:', password);
+        if (validateFields()) {
+            console.log('User:', username, 'Password:', password);
+        }
     };
 
     const handleForgotPassword = () => {
-        // Your logic for handling the "Forgot Password?" option
-        console.log('Forgot password clicked');
+        console.log('Forgot Password button clicked');
+        // Add your forgot password logic here
     };
 
     return (
@@ -36,13 +53,16 @@ export const Login = () => {
                     placeholder="Enter password"
                 />
             </div>
+            {error && <div className="error-message">{error}</div>}
             <button onClick={handleLogin}>Login</button>
             <p className="forgot-password" onClick={handleForgotPassword}>
                 Forgot Password?
             </p>
+            <div className="Register-link-container">
+                <Link to="/Register" className="login-link">New user? Register here</Link>
+            </div>
         </div>
     );
 };
 
 export default Login;
-

@@ -20,7 +20,7 @@ const Product = () => {
         setOpenSidebarToggle(!openSidebarToggle)
     }
     useEffect(() => {
-        axios.get("http://localhost:8080/inventory/1/products")
+        axios.get("http://localhost:8081/inventory/1/products")
             .then((res) =>
         {
             setInventory(res.data);
@@ -31,7 +31,7 @@ const Product = () => {
     async function updateProduct(event) {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:8080/inventory/1/updateProductQuantityInInventory", {
+            await axios.post("http://localhost:8081/inventory/1/updateProductQuantityInInventory", {
                 "id" : productId,
                 "name" : productName,
                 "quantity": quantity,

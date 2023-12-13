@@ -1,9 +1,23 @@
-/* MainContent.css */
-
-.home-container {
-    text-align: center;
-    margin: 50px;
+body, html {
+    height: 100%; /* Ensure that the html and body cover the full viewport height */
+    margin: 0; /* Reset any default margin */
+    padding: 0; /* Reset any default padding */
+    /* Background image properties removed from here */
 }
+
+.home-container { /* This class should be unique to your home page */
+    background-image: url('../../assets/backimage.jpg'); /* Adjust the URL to the correct image path */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: scroll; /* Allow the image to scroll with the page */
+    background-position: center; /* Center the image */
+    min-height: 100vh; /* Ensure it covers at least the full viewport height */
+    text-align: center;
+    padding: 50px; /* Maintain padding for the content */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* ... rest of your CSS ... */
 
 .options-container {
     display: flex;
@@ -16,7 +30,7 @@
 }
 
 .option {
-    background-color: #4caf50;
+    background-color: #2e2426;
     color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -25,5 +39,8 @@
 }
 
 .option:hover {
-    background-color: #45a049;
+    background-color: #ffb700;
+}
+h2 {
+    color: #232326; /* Replace 'blue' with whatever color you prefer */
 }
