@@ -4,9 +4,7 @@ import './Vendors.css';
 import Sidebar from "../dashboard/SideBar";
 
 function Vendors() {
-  const [vendors, setVendors] = useState([
-  {"id": 123, "vendorName": "Vendor Test Name 1", "email": "xyz@gmail.com", "mobileNumber": "65000000000", "companyName": "SJSU"},
-  {"id": 123, "vendorName": "Vendor Test Name 2", "email": "xyz@gmail.com", "mobileNumber": "65000000000", "companyName": "SJSU"}]);
+  const [vendors, setVendors] = useState([]);
 
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
   const OpenSidebar = () => {
