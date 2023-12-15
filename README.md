@@ -67,6 +67,19 @@ Run gradle build to build the application
 
 Use the command  gradle bootRun to start the application.
 
+
+4.Database 
+
+Install MySQL using Docker.
+
+Update application.properties with the below values
+
+spring.datasource.url=jdbc:mysql://{Host:Port}/{DBName}
+
+spring.datasource.username
+
+spring.datasource.password
+
 Demo Screenshots
 <img width="883" alt="image" src="https://github.com/pujaKumari15/StockWise/assets/144417727/b33055ac-4b2a-4ac7-9e1a-f99d1e439f64">
 
