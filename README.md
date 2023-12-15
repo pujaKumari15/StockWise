@@ -27,6 +27,12 @@ In the dynamic and competitive world of retail, particularly in the grocery sect
 8. Multi-Store Management: For multiple store locations, inventory is distributed efficiently among them to meet demand while minimizing operational costs.
 9. Online and Offline Integration: Integrate online and offline inventory systems for accurate stock monitoring, preventing overselling to customers.
 
+How to setup in local?
+Do npm install after download.
+Go to client folder and again run npm install for UI.
+Now npm run dev runs the frontend and backend simultaneously by using concurrently library in development mode. It will open http://localhost:3000 to view in browser. Any code changes in UI will reload in the browser automatically.
+You can also run frontend and backend in two different consoles.
+
 Demo Screenshots
 <img width="883" alt="image" src="https://github.com/pujaKumari15/StockWise/assets/144417727/b33055ac-4b2a-4ac7-9e1a-f99d1e439f64">
 
