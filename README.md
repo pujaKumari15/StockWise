@@ -28,10 +28,44 @@ In the dynamic and competitive world of retail, particularly in the grocery sect
 9. Online and Offline Integration: Integrate online and offline inventory systems for accurate stock monitoring, preventing overselling to customers.
 
 How to setup in local?
-Do npm install after download.
-Go to client folder and again run npm install for UI.
-Now npm run dev runs the frontend and backend simultaneously by using concurrently library in development mode. It will open http://localhost:3000 to view in browser. Any code changes in UI will reload in the browser automatically.
-You can also run frontend and backend in two different consoles.
+
+1.KeyCloak
+
+Install Keycloak using Docker.
+
+Create Realm, Client and perforrm cofigurations as per below screenshot.
+
+Backend Client Keycloak Settings(Private)
+
+<img width="1338" alt="image" src="https://github.com/pujaKumari15/StockWise/assets/144417727/568a486b-b401-4869-9ade-2f68a1ae120d">
+
+Update value of Valid Redirect URIs - *
+
+Frontend Client Keycloak Settings(Public)
+
+<img width="1338" alt="image" src="https://github.com/pujaKumari15/StockWise/assets/144417727/a41f376c-aca6-44cd-acf2-bfb0ad00015e">
+
+Update value of Valid Redirect URIs - http://localhost:3000/*
+
+Set below values in Application.Properties
+
+keycloak.resource= Name of Backend Client
+keycloak.credentials.secret=  Update this value from the client credential
+
+2.React Frontend
+
+Do npm install to download dependencies.
+
+Go to client folder and run npm start to start React Frontend.
+
+It will open http://localhost:3000 to view in browser. Any code changes in UI will reload in the browser automatically.
+
+
+3.Springboot Application
+
+Run gradle build to build the application
+
+Use the command  gradle bootRun to start the application.
 
 Demo Screenshots
 <img width="883" alt="image" src="https://github.com/pujaKumari15/StockWise/assets/144417727/b33055ac-4b2a-4ac7-9e1a-f99d1e439f64">
@@ -39,6 +73,16 @@ Demo Screenshots
 <img width="883" alt="image" src="https://github.com/pujaKumari15/StockWise/assets/144417727/38b925a5-08a5-4561-b15d-4ff5bbcc0776">
 
 <img width="950" alt="image" src="https://github.com/pujaKumari15/StockWise/assets/144417727/d04a1ced-295a-4531-a7d7-80937c3eb410">
+
+SSO using KeyCloak
+
+<img width="998" alt="image" src="https://github.com/pujaKumari15/StockWise/assets/144417727/dfd58953-0173-4c8f-9605-e79d14a03e16">
+
+
+User registered in keycloak
+
+<img width="1071" alt="image" src="https://github.com/pujaKumari15/StockWise/assets/144417727/3e060405-f5b6-425c-8c8e-1b42cbff6401">
+
 
 
 
