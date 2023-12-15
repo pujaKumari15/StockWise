@@ -27,5 +27,14 @@ In the dynamic and competitive world of retail, particularly in the grocery sect
 8. Multi-Store Management: For multiple store locations, inventory is distributed efficiently among them to meet demand while minimizing operational costs.
 9. Online and Offline Integration: Integrate online and offline inventory systems for accurate stock monitoring, preventing overselling to customers.
 
+Demo Screenshots
+<img width="883" alt="image" src="https://github.com/pujaKumari15/StockWise/assets/144417727/b33055ac-4b2a-4ac7-9e1a-f99d1e439f64">
+
+<img width="883" alt="image" src="https://github.com/pujaKumari15/StockWise/assets/144417727/38b925a5-08a5-4561-b15d-4ff5bbcc0776">
+
+<img width="950" alt="image" src="https://github.com/pujaKumari15/StockWise/assets/144417727/d04a1ced-295a-4531-a7d7-80937c3eb410">
+
+
+
 
 
